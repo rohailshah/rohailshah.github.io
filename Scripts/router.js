@@ -108,23 +108,23 @@
 
 let router = new core.Router();
 router.AddTable([
-    "/",
-    "/home",
-    "/about",
-    "/services",
-    "/contact",
-    "/contact-list",
-    "/products",
-    "/login",
-    "/register",
-    "/edit"
+    "/#/",
+    "/#/home",
+    "#/about",
+    "/#/services",
+    "/#/contact",
+    "/#/contact-list",
+    "/#/products",
+    "/#/login",
+    "/#/register",
+    "/#/edit"
 ]);
 
 let route = location.pathname; // alias for location.pathname
 
 if(router.Find(route) > -1)
 {
-    router.ActiveLink = (route == "/") ? "home" : route.substring(1);
+    router.ActiveLink = (route == "/#/") ? "home" : route.substring(3);
 }
 else
 {
