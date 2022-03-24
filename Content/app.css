@@ -48,3 +48,10 @@
     border-radius: .4em;
     width: 100%;
 }
+
+.edit-task
+{
+    position: relative;
+    top: -31px;
+    display: none;
+}

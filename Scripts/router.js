@@ -52,16 +52,12 @@ router.AddTable([
     "/services",
     "/contact",
     "/contact-list",
+    "/task-list",
     "/products",
-    "/login",
     "/register",
+    "/login",
     "/edit"
 ]);
 let route = location.pathname;
-if (router.Find(route) > -1) {
-    router.ActiveLink = (route == "/") ? "home" : route.substring(1);
-}
-else {
-    router.ActiveLink = "404";
-}
+router.ActiveLink = (router.Find(route) > -1) ? (route == "/") ? "home" : route.substring(1) : "404";
 //# sourceMappingURL=router.js.map
